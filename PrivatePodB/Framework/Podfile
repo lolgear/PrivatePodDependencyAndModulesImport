@@ -1,0 +1,21 @@
+platform :ios, '8.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def target_name
+ 'PrivatePodB'
+end
+
+def handmade
+	pod 'PrivatePodA', path: '../../PrivatePodA'
+end
+
+def external_pods	
+	pod 'CocoaLumberjack'
+end
+
+target target_name do
+	use_frameworks!
+    external_pods
+	handmade
+end

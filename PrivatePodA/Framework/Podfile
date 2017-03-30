@@ -1,0 +1,16 @@
+platform :ios, '8.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def target_name
+ 'PrivatePodA'
+end
+
+def all
+	use_frameworks!
+	pod 'CocoaLumberjack'
+end
+
+target target_name do
+	all
+end

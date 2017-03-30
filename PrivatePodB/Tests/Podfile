@@ -1,0 +1,24 @@
+source 'https://github.com/CocoaPods/Specs'
+
+def framework_name
+	'PrivatePodB'
+end
+
+xcodeproj framework_name + 'Tests'
+inhibit_all_warnings!
+
+def handmade
+	pod 'PrivatePodA', path: '../../PrivatePodA'
+end
+
+def import_pods
+	pod framework_name, path: '../'
+	pod "#{framework_name}/Tests", path: '../'
+end
+
+target :'iOS_Tests' do
+	platform :ios, '8.0'
+	use_frameworks!
+	handmade
+	import_pods	
+end

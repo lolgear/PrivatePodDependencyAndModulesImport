@@ -1,0 +1,5 @@
+framework module PrivatePodB {
+	umbrella header "PrivatePodB.h"
+	export * // export each module
+	module * { export * } // for each module export each submodule
+}

@@ -1,0 +1,37 @@
+PODS:
+  - CocoaLumberjack (3.1.0):
+    - CocoaLumberjack/Default (= 3.1.0)
+    - CocoaLumberjack/Extensions (= 3.1.0)
+  - CocoaLumberjack/Default (3.1.0)
+  - CocoaLumberjack/Extensions (3.1.0):
+    - CocoaLumberjack/Default
+  - PrivatePodA (0.0.1):
+    - CocoaLumberjack (~> 3.0)
+    - PrivatePodA/Tests (= 0.0.1)
+  - PrivatePodA/Tests (0.0.1):
+    - CocoaLumberjack (~> 3.0)
+  - PrivatePodB (0.0.1):
+    - CocoaLumberjack (~> 3.0)
+    - PrivatePodB/Tests (= 0.0.1)
+  - PrivatePodB/Tests (0.0.1):
+    - CocoaLumberjack (~> 3.0)
+
+DEPENDENCIES:
+  - PrivatePodA (from `../../PrivatePodA`)
+  - PrivatePodB (from `../`)
+  - PrivatePodB/Tests (from `../`)
+
+EXTERNAL SOURCES:
+  PrivatePodA:
+    :path: "../../PrivatePodA"
+  PrivatePodB:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 8311463ddf9ee86a06ef92a071dd656c89244500
+  PrivatePodA: 36f01e78444dd0276be21d2b2cb4436a5d4083ef
+  PrivatePodB: ad9f1ffa3fe3c47f4bf9114306478f1c5082e16e
+
+PODFILE CHECKSUM: 60d60d213f730b30790105291ada4131523c8a13
+
+COCOAPODS: 1.2.0
