@@ -3,14 +3,14 @@ platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 def target_name
- 'PrivatePodA'
+	'PrivatePodA'
 end
 
-def all
-	use_frameworks!
+def import_pods	
 	pod 'CocoaLumberjack'
 end
 
 target target_name do
-	all
+	use_frameworks!
+	import_pods
 end

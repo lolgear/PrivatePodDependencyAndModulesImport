@@ -8,12 +8,12 @@ xcodeproj framework_name + 'Tests'
 inhibit_all_warnings!
 
 def import_pods
-	use_frameworks!
 	pod framework_name, path: '../'
 	pod "#{framework_name}/Tests", path: '../'
 end
 
 target :'iOS_Tests' do
 	platform :ios, '8.0'
+    use_frameworks!
 	import_pods
 end
